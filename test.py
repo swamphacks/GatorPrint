@@ -3,7 +3,7 @@ from PIL import Image
 
 p = Usb(0x04b8, 0x0202, 0, profile="TM-T88IV")
 
-image = Image.open("../../Pictures/mikupony.jpeg")
+image = Image.open("test.png") # placeholder
 
 width, height = image.size
 
