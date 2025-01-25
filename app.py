@@ -22,6 +22,7 @@ def print_image():
         data = request.get_json()
 
         image_url = data.get('image_url')
+        name = data.get('name')
 
         print("Url:", image_url)
 
@@ -37,6 +38,7 @@ def print_image():
         resized = resized_image(image)
 
         epson.image(resized, center=True)
+        epson.text(name)
         epson.cut()
 
         return jsonify({'message': 'Successfully printed'}), 200
